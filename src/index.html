@@ -4,10 +4,228 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div class="container">
+      <div class="p-40">
+        <div class="shadow-xl">
+          <div class="mb-4 border-b border-gray-200">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center"
+              id="default-styled-tab"
+              data-tabs-toggle="#default-styled-tab-content"
+              data-tabs-active-classes="text-white bg-gray-500"
+              data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+              role="tablist"
+            >
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg"
+                  id="profile-styled-tab"
+                  data-tabs-target="#styled-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Bài 1
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="dashboard-styled-tab"
+                  data-tabs-target="#styled-dashboard"
+                  type="button"
+                  role="tab"
+                  aria-controls="dashboard"
+                  aria-selected="false"
+                >
+                  Bài 2
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="settings-styled-tab"
+                  data-tabs-target="#styled-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="settings"
+                  aria-selected="false"
+                >
+                  Bài 3
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#styled-contacts"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 4
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="default-styled-tab-content">
+            <!-- Bài 1 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="styled-profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <h1 class="title">Quản lý tuyển sinh</h1>
+              <div class="flex space-x-4">
+                <input
+                  id="diemChuan"
+                  class="rounded-md w-1/3"
+                  type="text"
+                  placeholder="Nhập điểm chuẩn"
+                />
+                <select
+                  id="selectKhuVuc"
+                  class="w-1/3 text-gray-900 text-sm rounded-lg block p-2.5"
+                >
+                  <option value="0" selected>Chọn khu vực</option>
+                  <option value="2">A</option>
+                  <option value="1">B</option>
+                  <option value="0.5">C</option>
+                </select>
+                <select
+                  id="selectDoiTuong"
+                  class="w-1/3 text-gray-900 text-sm rounded-lg block p-2.5"
+                >
+                  <option value="0" selected>Chọn đối tượng</option>
+                  <option value="2.5">1</option>
+                  <option value="1.5">2</option>
+                  <option value="1">3</option>
+                </select>
+              </div>
+              <div class="flex space-x-4 mt-5">
+                <input
+                  id="mon1"
+                  class="w-full rounded-md"
+                  type="text"
+                  placeholder="Điểm môn 1"
+                />
+                <input
+                  id="mon2"
+                  class="w-full rounded-md"
+                  type="text"
+                  placeholder="Điểm môn 2"
+                />
+                <input
+                  id="mon3"
+                  class="w-full rounded-md"
+                  type="text"
+                  placeholder="Điểm môn 3"
+                />
+              </div>
+              <button id="btnTuyenSinh" class="btn mt-6">Kết quả</button>
+              <div id="result1" class="p-4 bg-gray-400 rounded-md mt-6">
+                <i class="fa fa-hand-point-right"></i> <span></span>
+              </div>
+            </div>
+            <!-- Bài 2 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="styled-dashboard"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+            >
+              <h1 class="title">Tính tiền điện</h1>
+              <div class="flex space-x-4">
+                <input
+                  id="inputTen"
+                  class="rounded-md w-full"
+                  type="text"
+                  placeholder="Tên"
+                />
+                <input
+                  id="inputSoKm"
+                  class="rounded-md w-full"
+                  type="text"
+                  placeholder="Số KM"
+                />
+              </div>
+              <button id="btnTienDien" class="btn mt-6">Kết quả</button>
+              <div id="result2" class="p-4 bg-gray-400 rounded-md mt-6">
+                <i class="fa fa-hand-point-right"></i><span></span>
+              </div>
+            </div>
+            <!-- Bài 3 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="styled-settings"
+              role="tabpanel"
+              aria-labelledby="settings-tab"
+            >
+              <h1 class="title">Tính tiền thuế thu nhập cá nhân</h1>
+              <div class="flex space-x-4">
+                <input
+                  id="inputTenThue"
+                  class="rounded-md w-full"
+                  type="text"
+                  placeholder="Nhập tên"
+                />
+                <input
+                  id="inputSoKm"
+                  class="rounded-md w-full"
+                  type="text"
+                  placeholder="Tổng thu nhập năm"
+                />
+                <input
+                  id="inputSoKm"
+                  class="rounded-md w-full"
+                  type="text"
+                  placeholder="Số người phụ thuộc"
+                />
+              </div>
+              <button id="btnTienThue" class="btn mt-6">Kết quả</button>
+              <div id="result3" class="p-4 bg-gray-400 rounded-md mt-6">
+                <i class="fa fa-hand-point-right"></i><span></span>
+              </div>
+            </div>
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="styled-contacts"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                This is some placeholder content the
+                <strong class="font-medium text-gray-800 dark:text-white"
+                  >Contacts tab's associated content</strong
+                >. Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
