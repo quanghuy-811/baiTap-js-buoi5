@@ -174,7 +174,7 @@
             </div>
             <!-- Bài 3 -->
             <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              class="hidden p-4 rounded-lg bg-gray-50"
               id="styled-settings"
               role="tabpanel"
               aria-labelledby="settings-tab"
@@ -188,15 +188,15 @@
                   placeholder="Nhập tên"
                 />
                 <input
-                  id="inputSoKm"
+                  id="inputThuNhapNam"
                   class="rounded-md w-full"
-                  type="text"
+                  type="number"
                   placeholder="Tổng thu nhập năm"
                 />
                 <input
-                  id="inputSoKm"
+                  id="inputNguoiPhuThuoc"
                   class="rounded-md w-full"
-                  type="text"
+                  type="number"
                   placeholder="Số người phụ thuộc"
                 />
               </div>
@@ -205,20 +205,48 @@
                 <i class="fa fa-hand-point-right"></i><span></span>
               </div>
             </div>
+
+            <!-- Bài 4 -->
             <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              class="hidden p-4 rounded-lg bg-gray-50"
               id="styled-contacts"
               role="tabpanel"
               aria-labelledby="contacts-tab"
             >
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                This is some placeholder content the
-                <strong class="font-medium text-gray-800 dark:text-white"
-                  >Contacts tab's associated content</strong
-                >. Clicking another tab will toggle the visibility of this one
-                for the next. The tab JavaScript swaps classes to control the
-                content visibility and styling.
-              </p>
+              <h1 class="title">Tính tiền cáp</h1>
+              <div class="grid grid-cols-3 gap-4">
+                <select
+                  id="loaiKhachHang"
+                  class="w-full text-gray-900 text-sm rounded-lg p-2.5"
+                >
+                  <option value="0" selected>Chọn loại khách hàng</option>
+                  <option value="Nhà Dân">Nhà Dân</option>
+                  <option value="Doanh Nghiệp">Doanh Nghiệp</option>
+                </select>
+                <input
+                  id="inputThuNhapNam"
+                  class="rounded-md w-full"
+                  type="number"
+                  placeholder="Tổng thu nhập năm"
+                />
+                <input
+                  id="inputNguoiPhuThuoc"
+                  class="rounded-md w-full"
+                  type="number"
+                  placeholder="Số người phụ thuộc"
+                />
+                <input
+                  id="soKetNoi"
+                  class="hidden rounded-md w-full"
+                  type="number"
+                  placeholder="Số người phụ thuộc"
+                />
+              </div>
+
+              <button id="btnTienThue" class="btn mt-6">Kết quả</button>
+              <div id="result3" class="p-4 bg-gray-400 rounded-md mt-6">
+                <i class="fa fa-hand-point-right"></i><span></span>
+              </div>
             </div>
           </div>
         </div>
