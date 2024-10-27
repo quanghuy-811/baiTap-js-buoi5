@@ -122,11 +122,49 @@ getElement("#btnTienThue").onclick = () => {
 
 const DN = "Doanh Nghiệp";
 const ND = "Nhà Dân";
+// let phiXuLy = 0;
+// let phiCoBAn = 0;
+// let kenhCaoCap = 0;
 
-getElement("#loaiKhachHang").onchange = (event) => {
+const onchangeKhachHang = (event) => {
   if (event.target.value === DN) {
     getElement("#soKetNoi").style.display = "block";
   } else {
     getElement("#soKetNoi").style.display = "none";
   }
+};
+
+const tinhSoKetNoi = (param) => {
+  let tongTienKetNoi = 0;
+  if (param > 10) {
+    tongTienKetNoi = 75 + (param - 10) * 5;
+  } else {
+    tongTienKetNoi = 75;
+  }
+  return tongTienKetNoi;
+};
+
+getElement("#btnTienCap").onclick = () => {
+  let tongTienCap = 0;
+  let khachHang = getElement("#loaiKhachHang").value;
+  let maKhachHng = getElement("#maKhachHang").value;
+  let soKenhCaoCap = +getElement("#soKenhCaoCap").value;
+  let soKetNoi = +getElement("#soKetNoi").value;
+
+  if (khachHang === DN) {
+    let soTienKetNoi = tinhSoKetNoi(soKetNoi);
+    tongTienCap = 15 + soTienKetNoi + soKenhCaoCap * 50;
+  } else {
+    tongTienCap = 4.5 + 20.5 + soKenhCaoCap * 7.5;
+  }
+
+  let formattedNumber = new Intl.NumberFormat("vi-VN", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(tongTienCap);
+
+  formattedNumber = formattedNumber.replace(",", "."); // Thay dấu `,` thành dấu `.`
+  getElement("#result4 span").innerHTML = `
+  Mã khách hàng: ${maKhachHng} ; Tiền cáp: $${formattedNumber}
+  `;
 };

@@ -218,33 +218,34 @@
                 <select
                   id="loaiKhachHang"
                   class="w-full text-gray-900 text-sm rounded-lg p-2.5"
+                  onchange="onchangeKhachHang(event)"
                 >
                   <option value="0" selected>Chọn loại khách hàng</option>
                   <option value="Nhà Dân">Nhà Dân</option>
                   <option value="Doanh Nghiệp">Doanh Nghiệp</option>
                 </select>
                 <input
-                  id="inputThuNhapNam"
+                  id="maKhachHang"
                   class="rounded-md w-full"
                   type="number"
-                  placeholder="Tổng thu nhập năm"
+                  placeholder="Mã khách hàng"
                 />
                 <input
-                  id="inputNguoiPhuThuoc"
+                  id="soKenhCaoCap"
                   class="rounded-md w-full"
                   type="number"
-                  placeholder="Số người phụ thuộc"
+                  placeholder="Số kênh cao cấp"
                 />
                 <input
                   id="soKetNoi"
                   class="hidden rounded-md w-full"
                   type="number"
-                  placeholder="Số người phụ thuộc"
+                  placeholder="Số kết nối"
                 />
               </div>
 
-              <button id="btnTienThue" class="btn mt-6">Kết quả</button>
-              <div id="result3" class="p-4 bg-gray-400 rounded-md mt-6">
+              <button id="btnTienCap" class="btn mt-6">Kết quả</button>
+              <div id="result4" class="p-4 bg-gray-400 rounded-md mt-6">
                 <i class="fa fa-hand-point-right"></i><span></span>
               </div>
             </div>
